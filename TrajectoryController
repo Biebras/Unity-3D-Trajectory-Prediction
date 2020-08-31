@@ -106,7 +106,7 @@ public class TrajectoryController : MonoBehaviour
 
         var z = velocity.z;
 
-        var t = (HitPosition().z - transform.position.x) / z;
+        var t = (HitPosition().z - transform.position.z) / z;
         return t;
     }
 

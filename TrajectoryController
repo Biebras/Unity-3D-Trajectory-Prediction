@@ -26,14 +26,13 @@ public class TrajectoryController : MonoBehaviour
 
     private void Update()
     {
-        StartCoroutine(RenderArc());
+        RenderArc();
     }
 
-    private IEnumerator RenderArc()
+    private void RenderArc()
     {
         line.positionCount = resolution + 1;
         line.SetPositions(CalculateLineArray());
-        yield return null;
     }
 
     private Vector3[] CalculateLineArray()
